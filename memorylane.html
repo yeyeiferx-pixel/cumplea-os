@@ -2115,19 +2115,20 @@
         "
         bis_skin_checked="1"
       >
-     <h1>RECUERDOS</h1>
+        <h1>Our Memory Lane</h1>
         <p>
-          Momentos juntos como hermanitos JAJAJA
+          A journey through the most incredible moments we've shared together.
+          Hover over each photo to see why these memories mean so much to me!
           ✨💖
         </p>
       </div>
 
       <div class="slideshow-controls" style="opacity: 1" bis_skin_checked="1">
         <button id="startSlideshow" class="btn" style="display: flex">
-          <span>▶ Comenzar</span>
+          <span>▶ Start Slideshow</span>
         </button>
         <button id="pauseSlideshow" class="btn" style="display: none">
-          <span>⏸ Pausar</span>
+          <span>⏸ Pause Slideshow</span>
         </button>
       </div>
 
@@ -2558,7 +2559,7 @@
           emoji: "🌊",
         },
         {
-          image: "2.jpeg",
+          image: "foto2.jpeg",
           caption:
             "That time we stayed up all night just talking and watching the sunrise. I've never laughed so hard in my life!",
           isGif: false,
@@ -2566,7 +2567,7 @@
           emoji: "🌅",
         },
         {
-          image: "3.jpg",
+          image: "foto3.jpeg",
           caption:
             "Our first road trip together! You fell asleep and I drew a tiny mustache on you with a marker. You didn't notice for HOURS!",
           isGif: true,
@@ -2574,7 +2575,7 @@
           emoji: "🚗",
         },
         {
-          image: "4.jpg",
+          image: "foto4.jpeg",
           caption:
             "Remember our cooking disaster when we tried to make that fancy recipe? The smoke alarm going off, but the pizza we ordered after was the best ever!",
           isGif: false,
@@ -2582,7 +2583,7 @@
           emoji: "🍕",
         },
         {
-          image: "5.jpg",
+          image: "foto5.jpg",
           caption:
             "Our camping trip under the stars. You were terrified of that tiny spider and jumped so high! Still my favorite memory.",
           isGif: false,
@@ -2590,7 +2591,7 @@
           emoji: "🏕️",
         },
         {
-          image: "7.jpg",
+          image: "foto6.jpg",
           caption:
             "That concert where we danced until our feet hurt. Worth every blister!",
           isGif: true,
@@ -2598,7 +2599,7 @@
           emoji: "🎵",
         },
         {
-          image: "8.jpg",
+          image: "foto7.jpg",
           caption:
             "When we built that epic blanket fort during the storm and watched movies all day. Best rainy day ever!",
           isGif: false,
@@ -2851,122 +2852,6 @@
             block: "center",
           });
         }, 2000);
-       <h1>RECUERDOS</h1>
-<p>
-  Momentos juntos como hermanitos JAJAJA ✨💖
-</p>
-</div>
-
-<div class="slideshow-controls" style="opacity: 0">
-  <button id="startSlideshow" class="btn">
-    <span>▶ Comenzar</span>
-  </button>
-  <button id="pauseSlideshow" class="btn" style="display: none">
-    <span>⏸ Pausar</span>
-  </button>
-</div>
-
-<div class="gallery-container">
-  <div class="gallery" id="memoryGallery">
-    <!-- Las tarjetas se generan automáticamente -->
-  </div>
-</div>
-
-<div class="navigation-buttons">
-  <button id="backButton" class="btn">
-    <span>← Back to Welcome</span>
-  </button>
-  <button id="nextButton" class="btn">
-    <span>✨ Next Surprise! ✨</span>
-  </button>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-
-<script>
-gsap.registerPlugin(ScrollTrigger);
-
-const memories = [
-  { image: "1.jpg", caption: "Remember when we got lost hiking and found that amazing waterfall? Best wrong turn ever! 😂", rotationAngle: -2, emoji: "🌊" },
-  { image: "2.jpeg", caption: "That time we stayed up all night just talking and watching the sunrise. I've never laughed so hard in my life!", rotationAngle: 3, emoji: "🌅" },
-  { image: "3.jpg", caption: "Our first road trip together! You fell asleep and I drew a tiny mustache on you. You didn't notice for HOURS!", rotationAngle: -1, emoji: "🚗" },
-  { image: "4.jpg", caption: "Remember our cooking disaster? The smoke alarm went off, but the pizza after was legendary!", rotationAngle: 2, emoji: "🍕" },
-  { image: "5.jpg", caption: "Camping under the stars. You jumped because of a tiny spider 😂", rotationAngle: -3, emoji: "🏕️" },
-  { image: "7.jpg", caption: "That concert where we danced until our feet hurt. Worth every blister!", rotationAngle: 1, emoji: "🎵" },
-  { image: "8.jpg", caption: "Blanket fort + storm + movies = perfect day.", rotationAngle: -2, emoji: "🏰" },
-  { image: "1.jpg", caption: "Our spontaneous beach day. I still find sand everywhere.", rotationAngle: 2, emoji: "🏖️" },
-  { image: "2.jpeg", caption: "You've always been there for me. ❤️", rotationAngle: -1, emoji: "💕" },
-  { image: "3.jpg", caption: "Happy Birthday! 🎂 More adventures to come!", rotationAngle: 3, emoji: "🎂" }
-];
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  const galleryElement = document.getElementById("memoryGallery");
-  const startBtn = document.getElementById("startSlideshow");
-  const pauseBtn = document.getElementById("pauseSlideshow");
-
-  let slideshowInterval;
-  let currentSlide = 0;
-
-  // Generar tarjetas dinámicamente
-  memories.forEach((memory, index) => {
-
-    const card = document.createElement("div");
-    card.className = "memory-card";
-    card.style.setProperty("--rotate", memory.rotationAngle + "deg");
-    card.style.animationDelay = `${index * 0.1}s`;
-
-    const tape = document.createElement("div");
-    tape.className = "card-tape";
-    tape.style.setProperty("--rotate", memory.rotationAngle * 2 + "deg");
-
-    const img = document.createElement("img");
-    img.className = "memory-img";
-    img.src = memory.image;
-    img.alt = "Memory " + (index + 1);
-
-    const caption = document.createElement("div");
-    caption.className = "memory-caption";
-    caption.textContent = memory.caption;
-
-    const sticker = document.createElement("div");
-    sticker.className = "card-sticker";
-    sticker.innerHTML = `
-      <svg viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50" fill="#ff6ec4"/>
-        <text x="50" y="65" font-size="40" text-anchor="middle" fill="white">
-          ${memory.emoji}
-        </text>
-      </svg>
-    `;
-
-    card.appendChild(tape);
-    card.appendChild(img);
-    card.appendChild(caption);
-    card.appendChild(sticker);
-
-    galleryElement.appendChild(card);
-
-    setTimeout(() => {
-      card.classList.add("visible");
-    }, 300 + index * 150);
-  });
-
-  document.querySelector(".slideshow-controls").style.opacity = "1";
-
-  function startSlideshow() {
-    startBtn.style.display = "none";
-    pauseBtn.style.display = "inline-block";
-
-    slideshowInterval = setInterval(() => {
-      currentSlide = (currentSlide + 1) % memories.length;
-      const cards = document.querySelectorAll(".memory-card");
-
-      cards[currentSlide].scrollIntoView({
-        behavior: "smooth",
-        inline: "center",
-        block: "nearest"
       });
     </script>
 
@@ -2978,46 +2863,4 @@ document.addEventListener("DOMContentLoaded", function () {
       <div id="shadow-host-companion" bis_skin_checked="1"></div>
     </div>
   </body>
-    }, 3000);
-  }
-
-  function pauseSlideshow() {
-    pauseBtn.style.display = "none";
-    startBtn.style.display = "inline-block";
-    clearInterval(slideshowInterval);
-  }
-
-  startBtn.addEventListener("click", startSlideshow);
-  pauseBtn.addEventListener("click", pauseSlideshow);
-
-  document.getElementById("backButton").onclick = () => {
-    window.location.href = "index.html";
-  };
-
-  document.getElementById("nextButton").onclick = () => {
-    window.location.href = "cake.html";
-  };
-
-  // Animaciones
-  gsap.from(".navigation-buttons", {
-    duration: 1,
-    y: 50,
-    opacity: 0,
-    ease: "power3.out"
-  });
-
-  gsap.utils.toArray(".card-sticker").forEach((sticker) => {
-    gsap.to(sticker, {
-      rotation: "random(-15, 15)",
-      duration: "random(2,4)",
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut"
-    });
-  });
-
-});
-</script>
-
-</body>
 </html>
