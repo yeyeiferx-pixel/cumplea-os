@@ -440,7 +440,7 @@
                 </div>
                 <div style="margin-top: 20px;">
                     <a href="#" download class="back-button" style="background: #ffb6c1; border-color: #ffb6c1; color: white;">
-                        <i class="fas fa-download"></i> Download Your Digital Gift
+                        <i class="fas fa-download"></i> DESCARGAR CARTA
                     </a>
                 </div>
             </div>
@@ -471,7 +471,12 @@
             }, 500);
 
             // Typewriter effect for letter
-            const letterContent = "Feliz cumpleaños 🎉❤️,\n\nTe quiero muchoooo.\n\nGracias por estar para mí siempre, por apoyarme y acompañarme en todo.\n\nTe deseo lo mejor del mundo, espero poder apoyarte siempre y que logres todos tus sueños.\n\nSe te extraña JAJAJA 😂💕\n\nCon mucho cariño tu hermano Yeison(pues quien mas si no tiene mas), el mas guapo, una abrazo a la distancia 💖";
+           const letterContent = "Feliz cumpleaños 🎉❤️,\n\nTe quiero muchoooo.\n\nGracias por estar para mí siempre, por apoyarme y acompañarme en todo.\n\nTe deseo lo mejor del mundo, espero poder apoyarte siempre y que logres todos tus sueños.\n\nSe te extraña JAJAJA 😂💕\n\nCon mucho cariño tu hermano Yeison (pues quien más si no tiene más), el más guapo, un abrazo a la distancia 💖";
+
+const letterElement = document.getElementById("letter");
+
+letterElement.textContent = letterContent;
+
 
             
             new Typed('#typed-text', {
