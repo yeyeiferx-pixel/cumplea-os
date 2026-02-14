@@ -2115,7 +2115,7 @@
         "
         bis_skin_checked="1"
       >
-       <h1>RECUERDOS</h1>
+      <h1>RECUERDOS</h1>
 <p>
   Momentos juntos como hermanitos JAJAJA ✨💖
 </p>
@@ -2132,7 +2132,7 @@
 
 <div class="gallery-container">
   <div class="gallery" id="memoryGallery">
-    <!-- Las tarjetas se generan automáticamente -->
+    <!-- Se generan automáticamente -->
   </div>
 </div>
 
@@ -2152,16 +2152,19 @@
 gsap.registerPlugin(ScrollTrigger);
 
 const memories = [
-  { image: "1.jpg", caption: "Remember when we got lost hiking and found that amazing waterfall? Best wrong turn ever! 😂", rotationAngle: -2, emoji: "🌊" },
-  { image: "2.jpeg", caption: "That time we stayed up all night just talking and watching the sunrise. I've never laughed so hard in my life!", rotationAngle: 3, emoji: "🌅" },
-  { image: "3.jpg", caption: "Our first road trip together! You fell asleep and I drew a tiny mustache on you. You didn't notice for HOURS!", rotationAngle: -1, emoji: "🚗" },
-  { image: "4.jpg", caption: "Remember our cooking disaster? The smoke alarm went off, but the pizza after was legendary!", rotationAngle: 2, emoji: "🍕" },
-  { image: "5.jpg", caption: "Camping under the stars. You jumped because of a tiny spider 😂", rotationAngle: -3, emoji: "🏕️" },
-  { image: "7.jpg", caption: "That concert where we danced until our feet hurt. Worth every blister!", rotationAngle: 1, emoji: "🎵" },
-  { image: "8.jpg", caption: "Blanket fort + storm + movies = perfect day.", rotationAngle: -2, emoji: "🏰" },
-  { image: "1.jpg", caption: "Our spontaneous beach day. I still find sand everywhere.", rotationAngle: 2, emoji: "🏖️" },
-  { image: "2.jpeg", caption: "You've always been there for me. ❤️", rotationAngle: -1, emoji: "💕" },
-  { image: "3.jpg", caption: "Happy Birthday! 🎂 More adventures to come!", rotationAngle: 3, emoji: "🎂" }
+  { image: "foto1.JPG", caption: "Nuestro primer recuerdo juntos 💖", rotationAngle: -2, emoji: "🌊" },
+  { image: "foto2.JPG", caption: "Risas que nunca voy a olvidar 😂", rotationAngle: 3, emoji: "🌅" },
+  { image: "foto3.JPG", caption: "Ese día fue simplemente perfecto ✨", rotationAngle: -1, emoji: "🚗" },
+  { image: "foto4.JPG", caption: "Momentos que valen oro 🥰", rotationAngle: 2, emoji: "🍕" },
+  { image: "foto5.JPG", caption: "Siempre contigo en cada aventura 🏕️", rotationAngle: -3, emoji: "🏕️" },
+  { image: "foto6.JPG", caption: "Una de nuestras mejores locuras 🎵", rotationAngle: 1, emoji: "🎵" },
+  { image: "foto7.JPG", caption: "Recuerdos que hacen sonreír siempre 🏰", rotationAngle: -2, emoji: "🏰" },
+  { image: "foto8.JPG", caption: "Momentos espontáneos e inolvidables 🏖️", rotationAngle: 2, emoji: "🏖️" },
+  { image: "foto9.JPG", caption: "Siempre apoyándonos ❤️", rotationAngle: -1, emoji: "💕" },
+  { image: "foto10.JPG", caption: "Celebrando juntos 🎂", rotationAngle: 3, emoji: "🎂" },
+  { image: "foto11.JPG", caption: "Otro recuerdo especial ✨", rotationAngle: -2, emoji: "💫" },
+  { image: "foto12.JPG", caption: "Más aventuras por vivir 🚀", rotationAngle: 2, emoji: "🚀" },
+  { image: "foto13.JPG", caption: "Y este es solo el comienzo 💕", rotationAngle: 0, emoji: "🌟" }
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -2253,7 +2256,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "cake.html";
   };
 
-  // Animaciones
   gsap.from(".navigation-buttons", {
     duration: 1,
     y: 50,
